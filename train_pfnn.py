@@ -51,7 +51,6 @@ joint_weights = np.array([
 
 Xstd[w*10+j*3*0:w*10+j*3*1] = Xstd[w*10+j*3*0:w*10+j*3*1].mean() / (joint_weights * 0.1) # Pos
 Xstd[w*10+j*3*1:w*10+j*3*2] = Xstd[w*10+j*3*1:w*10+j*3*2].mean() / (joint_weights * 0.1) # Vel
-Xstd[w*10+j*3*2:          ] = Xstd[w*10+j*3*2:          ].mean() # Terrain
 
 Ystd[0:2] = Ystd[0:2].mean() # Translational Velocity
 Ystd[2:3] = Ystd[2:3].mean() # Rotational Velocity
