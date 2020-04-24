@@ -3,7 +3,6 @@ import numpy as np
 import theano
 import theano.tensor as T
 theano.config.allow_gc = True
-import sys
 
 sys.path.append('./nn')
 
