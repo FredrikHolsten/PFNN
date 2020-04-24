@@ -3,6 +3,7 @@ import numpy as np
 import theano
 import theano.tensor as T
 theano.config.allow_gc = True
+import sys
 
 sys.path.append('./nn')
 
@@ -17,7 +18,7 @@ rng = np.random.RandomState(23456)
 
 """ Load Data """
 
-database = np.load('database.npz')
+database = np.load(sys.argv[1])
 X = database['Xun'].astype(theano.config.floatX)
 Y = database['Yun'].astype(theano.config.floatX)
 P = database['Pun'].astype(theano.config.floatX)
